@@ -60,7 +60,7 @@ func Handle(w http.ResponseWriter, r *http.Request) {
     defer r.Body.Close()
 	
 	if string(body) != handshakes["buff"] && selected_session == _session.SessionId {
-		fmt.Printf("%s", Fore["GREEN"]+string(body)+Fore["RESET"])
+		fmt.Printf("%s", Fore.GREEN+string(body)+Fore.RESET)
 		
 		for i:=0;i<len(sessions);i++ {
 			if sessions[i].SessionId == _session.SessionId {

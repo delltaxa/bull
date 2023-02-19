@@ -125,20 +125,20 @@ func makeshell() {
                 }
 
                 if len(os) < 1 || len(lhost) < 1 || len(lport) < 1 {
-                        fmt.Printf("%s", "Usage: generate "+Fore["RED"]+"os=<os> lhost=<lhost> lport=<lport>"+Fore["RESET"])
+                        fmt.Printf("%s", "Usage: generate "+Fore.RED+"os=<os> lhost=<lhost> lport=<lport>"+Fore.RESET)
                         break
                 }
 
 				var gened string = generate(os, lhost, "8080")
 
 				if gened == "OSNx0" {
-					Log_Error("Operating System is not supported.")
+					Log.Error("Operating System is not supported.")
 				} else {
 					fmt.Printf("%s", gened)
 				}
 			case("alias"):
 				if len(parsed_user_input) != 3 {
-					fmt.Printf("%s", "Usage: alias "+Fore["RESET"]+"<session> <alias>"+Fore["RESET"])
+					fmt.Printf("%s", "Usage: alias "+Fore.RESET+"<session> <alias>"+Fore.RESET)
 				}
 
 				var found bool = false
@@ -153,28 +153,32 @@ func makeshell() {
 					fmt.Printf("Sesssion was not found.")
 				}
 			case("reset"):
-				Log_Warning("All aliases will be removed, do you want to continue [Y/*] ")
+				Log.Warning("All aliases will be removed, do you want to continue [Y/*] ")
 
 				var uin string = input()
 				if strings.ToLower(uin) == "y" {
 					sessions = []session{}
-					Log_Info("Sesssion list was reset.\n")
+					Log.Info("Sesssion list was reset.\n")
 				} else {
-					Log_Info("Reset was Successfuly cancled.\n")
+					Log.Info("Reset was Successfuly cancled.\n")
 				}
 			case("server"):
-				Log_Info("VERSION -> "+Fore["YELLOW"]+version+Fore["RESET"]+"\n")
-				Log_Info("ENGINE  -> "+Fore["YELLOW"]+engine_server+Fore["RESET"]+"\n")
+				Log.Info("VERSION -> "+Fore.YELLOW+version+Fore.RESET+"\n")
+				Log.Info("ENGINE  -> "+Fore.YELLOW+engine_server+Fore.RESET+"\n")
 			case("clear"):
 				cmd := exec.Command("clear")
 				cmd.Stdout = os.Stdout
 				cmd.Run()
 			case("help"):
-				fmt.Printf("%s", help_text)
+				if len(parsed_user_input) > 1 {
+					help.help(parsed_user_input[1])
+				} else {
+					help.display_all()
+				}
 			case("exit"):
 				os.Exit(0)
 			default:
-				Log_Error("Command not found.")
+				Log.Error("Command not found.")
 		}
 	}
 }
