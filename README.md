@@ -46,6 +46,4 @@ Display sessions
 ![image](https://user-images.githubusercontent.com/114283067/220092636-7349d470-85d1-463e-9585-fe416446ba09.png)
 
 Getting a shell
-```
-IMAGE3
-```
+![image](https://user-images.githubusercontent.com/114283067/220093738-605d2222-aedb-437d-9019-daec351067a4.png)
