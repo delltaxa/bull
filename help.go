@@ -10,7 +10,7 @@ type _tmp_help struct {
 }
 
 var _HELP_COMMANDS []_tmp_help = []_tmp_help {
-	_tmp_help{name: "help", functionality: "display this message.", doc: "help {comand}=display all commands+func, help", arguments: true},
+	_tmp_help{name: "help", functionality: "display this message.", doc: "Usage: help <command>\nThis Command will display info about commands.", arguments: true},
 }
 
 type _ZERO_STRUCT struct {}
