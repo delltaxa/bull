@@ -42,8 +42,11 @@ or (this will run the server on all devices)
 Generating a payload
 ![image](https://user-images.githubusercontent.com/114283067/220091299-421feaa2-4f41-4acb-a84e-602b164d039a.png)
 
+<br/>
+
 Display sessions
 ![image](https://user-images.githubusercontent.com/114283067/220092636-7349d470-85d1-463e-9585-fe416446ba09.png)
 
+<br/>
 Getting a shell
 ![image](https://user-images.githubusercontent.com/114283067/220093738-605d2222-aedb-437d-9019-daec351067a4.png)
