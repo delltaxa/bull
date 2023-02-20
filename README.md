@@ -43,9 +43,7 @@ Generating a payload
 ![image](https://user-images.githubusercontent.com/114283067/220091299-421feaa2-4f41-4acb-a84e-602b164d039a.png)
 
 Display sessions
-```
-IMAGE2
-```
+![image](https://user-images.githubusercontent.com/114283067/220092636-7349d470-85d1-463e-9585-fe416446ba09.png)
 
 Getting a shell
 ```
