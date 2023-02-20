@@ -40,9 +40,7 @@ or (this will run the server on all devices)
 ## Showcase
 
 Generating a payload
-```
-IMAGE1
-```
+![image](https://user-images.githubusercontent.com/114283067/220091299-421feaa2-4f41-4acb-a84e-602b164d039a.png)
 
 Display sessions
 ```
