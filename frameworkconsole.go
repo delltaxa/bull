@@ -109,6 +109,7 @@ func makeshell() {
 				var os string
                 var lhost string
 				var lport string
+				var obfuscate bool = false
                 for i:=0;i<len(parsed_user_input);i++ {
                 	var arg string = parsed_user_input[i]
                     if strings.Contains(arg, "=") {
@@ -121,7 +122,9 @@ func makeshell() {
 							case("lport"):
 								lport = split[1]
                         }
-                    }
+                    } else if arg == "obfuscate" {
+						obfuscate = true
+					}
                 }
 
                 if len(os) < 1 || len(lhost) < 1 || len(lport) < 1 {
@@ -129,7 +132,7 @@ func makeshell() {
                         break
                 }
 
-				var gened string = generate(os, lhost, "8080")
+				var gened string = generate(os, lhost, "8080", obfuscate)
 
 				if gened == "OSNx0" {
 					Log.Error("Operating System is not supported.")
