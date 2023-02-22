@@ -39,6 +39,7 @@ func Handle(w http.ResponseWriter, r *http.Request) {
 
 	if newsession {
 		sessions = append(sessions, _session)
+		
 		fmt.Fprint(w, "None")
 
 		return

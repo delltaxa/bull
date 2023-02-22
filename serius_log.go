@@ -90,17 +90,21 @@ var Fore TMP_FORE = TMP_FORE{
 /*--------------------------*/
 
 type ZERO_STRUCT struct {}
+
 var Log ZERO_STRUCT = ZERO_STRUCT{}
 
 func (mc *ZERO_STRUCT) Error(str string) {
     fmt.Printf("["+Fore.RED+"Err"+Fore.RESET+"] ["+Fore.GREEN+string(time.Now().Format("15:04:05"))+Fore.RESET+"] %s", str)
 }
+
 func (mc *ZERO_STRUCT) Info(str string) {
     fmt.Printf("["+Fore.GREEN+"Inf"+Fore.RESET+"] ["+Fore.GREEN+string(time.Now().Format("15:04:05"))+Fore.RESET+"] %s", str)
 }
+
 func (mc *ZERO_STRUCT) Warning(str string) {
     fmt.Printf("["+Fore.YELLOW+"Wrn"+Fore.RESET+"] ["+Fore.GREEN+string(time.Now().Format("15:04:05"))+Fore.RESET+"] %s", str)
 }
+
 func (mc *ZERO_STRUCT) Debug(str string) {
     fmt.Printf("["+Fore.BLUE+"Dbg"+Fore.RESET+"] ["+Fore.GREEN+string(time.Now().Format("15:04:05"))+Fore.RESET+"] %s", str)
 }

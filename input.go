@@ -11,7 +11,7 @@ func input() string {
     userinput, err := reader.ReadString('\n')
 
     if err != nil {
-            return ""
+        return ""
     }
 
     return userinput[0:len(userinput) - 1]
