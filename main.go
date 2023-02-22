@@ -10,7 +10,7 @@ import (
 
 
 var engine_server string = "0.0.0.0:8080"
-var version string = "1.0.4-BETA"
+var version string = "1.0.7-BETA"
 
 func main() {
 	animate("Starting the BUll-Framework")

