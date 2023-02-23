@@ -1,7 +1,7 @@
 
 # Bull
 
-<img width="100" src="https://user-images.githubusercontent.com/114283067/220855638-f5973f5e-89ce-461a-81ef-666a909cde9e.png" >
+<img width="250" src="https://user-images.githubusercontent.com/114283067/220855638-f5973f5e-89ce-461a-81ef-666a909cde9e.png" >
 
 Bull is an simple reverse shell manager with a async http server.
 
